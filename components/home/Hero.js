@@ -16,13 +16,16 @@ const CanvasContainer = styled.div`
 const Model = ({ isTabletOrMobile, scrollPos }) => {
   const gltf = useLoader(GLTFLoader, "/obj/other/scene.gltf");
   const scrollRatio = scrollPos / (window.innerHeight + 70);
-  const rotation = scrollRatio < 1 ? scrollRatio : 1;
+  const rotationOffset = isTabletOrMobile ? 0.2 : 0;
+  const maxRotation = 1 + rotationOffset;
+  const rotation =
+    scrollRatio < maxRotation ? scrollRatio + rotationOffset : maxRotation;
   return (
     <>
       <primitive
         object={gltf.scene}
         scale={isTabletOrMobile ? 0.3 : 0.375}
-        position={[0, -1.3, 0.5]}
+        position={[0, isTabletOrMobile ? -0.8 : -1.3, 0.5]}
         rotation={[rotation, 0, 0]}
       />
     </>

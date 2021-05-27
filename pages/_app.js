@@ -1,3 +1,4 @@
+import "resize-observer-polyfill";
 import "../styles/globals.css";
 import { Grommet } from "grommet";
 import theme from "../lib/theme";
