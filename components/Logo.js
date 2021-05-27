@@ -30,7 +30,7 @@ const LogoBg = styled.img`
 `;
 
 const LogoStarOne = styled.img`
-  transition: 0.3s;
+  transition: 0.2s;
   width: 15%;
   height: 15%;
   position: absolute;
@@ -40,7 +40,7 @@ const LogoStarOne = styled.img`
 `;
 
 const LogoStarTwo = styled.img`
-  transition: 0.3s;
+  transition: 0.2s;
   width: 15%;
   height: 15%;
   position: absolute;
@@ -50,7 +50,7 @@ const LogoStarTwo = styled.img`
 `;
 
 const LogoContainer = styled.div`
-  transition: 0.3s;
+  transition: 0.2s;
   width: ${({ isSmall }) => (isSmall ? "60px" : "80px")};
   height: ${({ isSmall }) => (isSmall ? "60px" : "80px")};
   position: relative;

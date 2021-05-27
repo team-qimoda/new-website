@@ -17,7 +17,7 @@ const LogoAnchor = styled(Anchor)`
 const StyledHeader = styled(GrommetHeader)`
   position: sticky;
   top: 0;
-  transition: 0.3s;
+  transition: 0.2s;
   padding: ${({ isSmall }) => (isSmall ? "12px" : "24px")};
   height: ${({ isSmall }) => (isSmall ? "70px" : "96px")};
 `;

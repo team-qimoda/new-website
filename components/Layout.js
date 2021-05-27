@@ -4,7 +4,7 @@ import Footer from "components/Footer";
 import styled from "styled-components";
 
 const Main = styled.main`
-  padding-bottom: 5rem;
+  // padding-bottom: 5rem;
   flex: 1;
   display: flex;
   flex-direction: column;
