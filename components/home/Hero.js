@@ -15,8 +15,9 @@ const CanvasContainer = styled.div`
 
 const Model = ({ isTabletOrMobile, scrollPos }) => {
   const gltf = useLoader(GLTFLoader, "/obj/other/scene.gltf");
+  console.log(scrollPos);
   const scrollRatio = scrollPos / (window.innerHeight + 70);
-  const rotationOffset = isTabletOrMobile ? 0.2 : 0;
+  const rotationOffset = isTabletOrMobile ? 0.2 : 0.15;
   const maxRotation = 1 + rotationOffset;
   const rotation =
     scrollRatio < maxRotation ? scrollRatio + rotationOffset : maxRotation;
@@ -34,7 +35,7 @@ const Model = ({ isTabletOrMobile, scrollPos }) => {
 
 const Hero = () => {
   const isTabletOrMobile = useMediaQuery({ query: "(max-width: 1224px)" });
-  const scrollY = useScrollPosition(60);
+  const scrollY = useScrollPosition(80);
   return (
     <CanvasContainer>
       <Canvas>
