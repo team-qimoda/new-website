@@ -1,20 +1,27 @@
-import Layout from "components/Layout";
-import Hero from "components/home/Hero";
-import styles from "styles/Home.module.css";
-import styled from "styled-components";
-import theme from "lib/theme";
+import React from "react";
+import Hero from "sections/homepage/Hero";
+import Fact from "sections/homepage/Fact";
+import Content from "sections/homepage/Content";
+import CaseStudies from "sections/homepage/CaseStudies";
+import Reviews from "sections/homepage/Reviews";
+import Contact from "sections/homepage/Contact";
 
-const OrangeBg = styled.div`
-  width: 100%;
-  height: 200vh;
-  background-color: ${theme.global.colors.brand};
-`;
-export default function Home() {
+import PageWrapper from "components/PageWrapper";
+import Companies from "sections/homepage/Companies";
+
+const LandingPage7 = () => {
   return (
-    <Layout>
-      <OrangeBg>
+    <>
+      <PageWrapper headerDark footerDark>
         <Hero />
-      </OrangeBg>
-    </Layout>
+        <Fact />
+        <Companies />
+        <Content />
+        <CaseStudies />
+        {/* <Reviews /> */}
+        <Contact />
+      </PageWrapper>
+    </>
   );
-}
+};
+export default LandingPage7;

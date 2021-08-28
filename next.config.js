@@ -1,2 +1,5 @@
 const withTM = require("next-transpile-modules")(["three"]);
-module.exports = withTM();
+const withOptimizedImages = require("next-optimized-images");
+const withFonts = require("next-fonts");
+
+module.exports = withTM(withFonts(withOptimizedImages()));
