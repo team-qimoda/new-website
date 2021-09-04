@@ -8,6 +8,7 @@ import deloitteLogo from "public/companies/deloitte.png";
 import ogilvyLogo from "public/companies/ogilvy.png";
 import mayadLogo from "public/companies/mayad.png";
 import njabLogo from "public/companies/njab.png";
+import IKLogo from "public/companies/insuranceko.png";
 
 const SectionStyled = styled(Section)`
   padding: 3em 0;
@@ -57,7 +58,7 @@ const Companies = () => (
             className="mb-4 mb-md-0 d-flex align-items-center justify-content-center"
           >
             <LogoContainer>
-              <CompanyLogo src={ogilvyLogo} alt="Ogilvy" />
+              <CompanyLogo src={IKLogo} alt="InsuranceKo" />
             </LogoContainer>
           </Col>
           <Col
@@ -77,7 +78,7 @@ const Companies = () => (
             className="mb-4 mb-md-0 d-flex align-items-center justify-content-center"
           >
             <LogoContainer>
-              <CompanyLogo src={njabLogo} alt="Mayad" />
+              <CompanyLogo src={njabLogo} alt="NJAB" />
             </LogoContainer>
           </Col>
         </Row>

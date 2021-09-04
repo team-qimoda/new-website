@@ -5,7 +5,8 @@ export const menuItems = [
     label: "Projects",
     items: [
       { name: "projects", label: "All projects" },
-      { name: "project-details", label: "Project 1" },
+      { name: "project/insurance-ko", label: "InsuranceKo" },
+      { name: "project/njab", label: "Not Just a Box Events" },
     ],
   },
   { name: "news", label: "News" },

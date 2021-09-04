@@ -4,8 +4,8 @@ import { Container, Row, Col } from "react-bootstrap";
 
 import { Title, Box, Text, Button } from "../../components/Core";
 import { device } from "../../utils";
-import imgCase1 from "../../assets/image/jpeg/l8-case-image-1.jpg";
-import imgCase2 from "../../assets/image/jpeg/l8-case-image-2.jpg";
+import imgCase1 from "../../assets/image/jpeg/wedding.jpeg";
+import imgCase2 from "../../assets/image/jpeg/insurance.jpeg";
 
 const CaseCardStyled = styled(Box)`
   width: 100%;
@@ -14,6 +14,8 @@ const CaseCardStyled = styled(Box)`
   .img-container {
     position: relative;
     z-index: 1;
+    max-height: 350px;
+
     img {
       border-radius: 8px 8px 0 0;
       max-width: 100%;
@@ -125,13 +127,14 @@ const CaseCard = ({
   meta = "",
   title = "",
   children = "",
+  link,
 }) => {
   return (
     <CaseCardStyled>
       <div className="img-container">
         <img src={img} alt="" />
         <BtnContainer>
-          <Button>View Case Study</Button>
+          <Button link={link}>View Project</Button>
         </BtnContainer>
       </div>
       <TextContent bg={bg}>
@@ -169,6 +172,7 @@ const CaseStudies = () => {
             >
               <CaseCard
                 img={imgCase1}
+                link="/project/njab"
                 meta={`Website Development, Content Marketing`}
                 title="Giving hope to hopeless romantics"
               >
@@ -190,6 +194,7 @@ const CaseStudies = () => {
                 bg="light"
                 isDark={false}
                 img={imgCase2}
+                link="/project/insurance-ko"
                 meta={`Website Design & Development, E-commerce, Content Marketing`}
                 title="How we’re helping democratise insurance"
               >
