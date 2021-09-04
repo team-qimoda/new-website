@@ -4,12 +4,17 @@ import { Container, Row, Col } from "react-bootstrap";
 import PageWrapper from "components/PageWrapper";
 import { Section, Title, Text, Box } from "components/Core";
 import styled from "styled-components";
+import { breakpoints } from "utils";
 
 const LogoContainer = styled(Box)`
-  height: 80px;
+  height: 40px;
 
   img {
     height: 100%;
+  }
+
+  @media (min-width: ${breakpoints.lg}px) {
+    height: 60px;
   }
 `;
 

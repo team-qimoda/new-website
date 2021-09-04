@@ -39,12 +39,12 @@ const CTA = () => (
             <Box mb={5} className="text-center">
               <Title color="light">Ready to launch?</Title>
               <Text color="light" opacity={0.7}>
-                Are you interested to join our team? Check out our job openings
-                and apply on your suitable role.
+                Interested in developing your project? Give us a shout and let's
+                get started
               </Text>
             </Box>
             <Box>
-              <Button>Get Omega Now</Button>
+              <Button>Get Started</Button>
             </Box>
           </Col>
         </Row>
