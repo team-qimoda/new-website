@@ -1,11 +1,10 @@
 import React from "react";
 import styled from "styled-components";
 import { Container, Row, Col } from "react-bootstrap";
-
+import Image from "next/image";
 import { Section, Box } from "../../components/Core";
 import { device } from "../../utils";
 import deloitteLogo from "public/companies/deloitte.png";
-import ogilvyLogo from "public/companies/ogilvy.png";
 import mayadLogo from "public/companies/mayad.png";
 import njabLogo from "public/companies/njab.png";
 import IKLogo from "public/companies/insuranceko.png";
@@ -18,20 +17,25 @@ const SectionStyled = styled(Section)`
   }
 `;
 
-const CompanyLogo = styled.img`
-  height: auto;
-  width: 100%;
-`;
-
 const LogoContainer = styled(Box)`
   width: 80%;
+  height: 70px;
+
+  div {
+    height: 100%;
+
+    img {
+      object-fit: contain;
+      height: 100%;
+    }
+  }
 
   @media ${device.md} {
     padding: 1em 0;
   }
 
   @media ${device.lg} {
-    padding: s0;
+    padding: 0;
   }
 `;
 
@@ -48,7 +52,12 @@ const Companies = () => (
             className="mb-4 mb-md-0 d-flex align-items-center justify-content-center"
           >
             <LogoContainer>
-              <CompanyLogo src={deloitteLogo} alt="Deloitte" />
+              <Image
+                src={deloitteLogo}
+                alt="Deloitte"
+                height={100}
+                width={400}
+              />
             </LogoContainer>
           </Col>
           <Col
@@ -58,7 +67,7 @@ const Companies = () => (
             className="mb-4 mb-md-0 d-flex align-items-center justify-content-center"
           >
             <LogoContainer>
-              <CompanyLogo src={IKLogo} alt="InsuranceKo" />
+              <Image src={IKLogo} alt="InsuranceKo" height={100} width={400} />
             </LogoContainer>
           </Col>
           <Col
@@ -68,7 +77,7 @@ const Companies = () => (
             className="mb-4 mb-md-0 d-flex align-items-center justify-content-center"
           >
             <LogoContainer>
-              <CompanyLogo src={mayadLogo} alt="Mayad" />
+              <Image src={mayadLogo} alt="Mayad" height={100} width={400} />
             </LogoContainer>
           </Col>
           <Col
@@ -78,7 +87,7 @@ const Companies = () => (
             className="mb-4 mb-md-0 d-flex align-items-center justify-content-center"
           >
             <LogoContainer>
-              <CompanyLogo src={njabLogo} alt="NJAB" />
+              <Image src={njabLogo} alt="NJAB" height={100} width={400} />
             </LogoContainer>
           </Col>
         </Row>

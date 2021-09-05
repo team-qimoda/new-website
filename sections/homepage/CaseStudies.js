@@ -2,10 +2,11 @@ import React from "react";
 import styled from "styled-components";
 import { Container, Row, Col } from "react-bootstrap";
 
-import { Title, Box, Text, Button } from "../../components/Core";
-import { device } from "../../utils";
-import imgCase1 from "../../assets/image/jpeg/wedding.jpeg";
-import imgCase2 from "../../assets/image/jpeg/insurance.jpeg";
+import { Title, Box, Text, Button } from "components/Core";
+import { device } from "utils";
+import imgCase1 from "assets/image/jpeg/wedding.jpeg";
+import imgCase2 from "assets/image/jpeg/insurance.jpeg";
+import Image from "next/image";
 
 const CaseCardStyled = styled(Box)`
   width: 100%;
@@ -120,6 +121,20 @@ const TitleStyled = styled(Title)`
   }
 `;
 
+const ImgContainer = styled.div`
+  height: 350px;
+
+  & > div:first-of-type {
+    height: 100%;
+    width: 100%;
+
+    img {
+      object-fit: cover;
+      object-position: top;
+    }
+  }
+`;
+
 const CaseCard = ({
   isDark = true,
   bg = "secondary",
@@ -131,12 +146,12 @@ const CaseCard = ({
 }) => {
   return (
     <CaseCardStyled>
-      <div className="img-container">
-        <img src={img} alt="" />
+      <ImgContainer className="img-container">
+        <Image src={img} alt="" height={600} width={400} />
         <BtnContainer>
           <Button link={link}>View Project</Button>
         </BtnContainer>
-      </div>
+      </ImgContainer>
       <TextContent bg={bg}>
         <Shape bg={bg}>
           <svg height="22" viewBox="0 0 540 22">
