@@ -8,19 +8,58 @@ import ProjectDetails from "templates/project-details";
 import { Row, Col } from "react-bootstrap";
 import { Box, Title, Text, Button, List } from "components/Core";
 import imgCase2 from "assets/image/png/insuranceko-mockup.png";
-import imgCase3 from "assets/image/jpeg/case-details-half-single-2.jpg";
+import imgCase3 from "assets/image/png/masonry-insuranceko.png";
+import nextjs from "assets/image/logo/nextjs.png";
+import prismic from "assets/image/logo/prismic.jpeg";
+import fauna from "assets/image/logo/fauna.svg";
 import styled from "styled-components";
+import { breakpoints } from "utils";
 
 const CaseImage = styled(Box)`
-  height: 450px;
+  height: 250px;
   overflow: hidden;
   border-radius: 10px;
+  margin-bottom: 1em;
+
+  @media (min-width: ${breakpoints.lg}px) {
+    height: 450px;
+    margin-bottom: 0;
+  }
 `;
 
 const InsideImage = styled.img`
   height: 100%;
   width: 100%;
   object-fit: cover;
+`;
+
+const LogoList = styled.div`
+  @media (min-width: ${breakpoints.lg}px) {
+    display: flex;
+  }
+`;
+
+const LogoContainer = styled.div`
+  height: 40px;
+  margin-bottom: 0.5em;
+
+  @media (min-width: ${breakpoints.lg}px) {
+    margin: 0 1em;
+
+    &:first-of-type {
+      margin-left: 0;
+    }
+  }
+`;
+
+const TechLogo = styled.img`
+  height: 100%;
+
+  object-fit: cover;
+
+  @media (min-width: ${breakpoints.lg}px) {
+    width: 100%;
+  }
 `;
 
 const InsuranceKo = () => {
@@ -45,27 +84,14 @@ const InsuranceKo = () => {
                   Client Brief
                 </Title>
                 <Text variant="small">
-                  A Senior Data Engineer provides technical and delivery
-                  leadership for a team of developers working on data
-                  integration and processing projects. This role will work with
-                  stakeholders and other developers to design and implement
-                  technical data solutions for the business in a way that
-                  balances quality, cost, time and maintainability.
+                  InsuranceKo, an insurance provider based in the Philippines,
+                  contacted us to create their own e-commerce website as well as
+                  a client portal to assist with their product offerings. In an
+                  effort to make insurance as accessible as possible, we
+                  designed a user-friendly shopfront website alongside an
+                  intuitive authentication and e-commerce experience.
                 </Text>
               </Box>
-              {/* <Box pb={["40px", null, "65px"]}>
-                <Title variant="card" mb="18px">
-                  Client Brief
-                </Title>
-                <Text variant="small">
-                  A Senior Data Engineer provides technical and delivery
-                  leadership for a team of developers working on data
-                  integration and processing projects. This role will work with
-                  stakeholders and other developers to design and implement
-                  technical data solutions for the business in a way that
-                  balances quality, cost, time and maintainability.
-                </Text>
-              </Box> */}
             </Col>
           </Row>
           <Row>
@@ -82,50 +108,64 @@ const InsuranceKo = () => {
           </Row>
           <Row className="mt-5">
             <Col lg="12" xl="10" className="offset-xl-1 pt-4">
-              <Box pb={["40px", null, "65px"]}>
+              <Box pb={["40px", null, "30px"]}>
                 <Title variant="card" mb="18px">
-                  Solutions
+                  Solution
                 </Title>
                 <Text variant="small" mb={3}>
-                  A Senior Data Engineer provides technical and delivery
-                  leadership for a team of developers working on data
-                  integration and processing projects. This role will work with
-                  stakeholders and other developers to design and implement.
+                  We're currently designing and developing a custom website
+                  built on Next.js - a React framework optimised not just for{" "}
+                  <strong>static-site</strong> (static pages rely on unchanging
+                  data, i.e. pages that don't change content unless you refresh
+                  the page like blog posts) but also{" "}
+                  <strong>dynamic site</strong> generation (dynamic pages
+                  operate on changing data, i.e. profile pages, authentication).
                 </Text>
-                <List>
-                  <li>
-                    This role will work with stakeholders and other developers
-                    to design and implement.
-                  </li>
-                  <li>
-                    Create custom landing pages with Omega that converts more
-                    visitors than any website. With lots of unique blocks, you
-                    can easily build a page without any design or custom coding.
-                  </li>
-                  <li>
-                    You might be surprised to know that not only do we run some
-                    of the biggest websites in the world; we’re also growing
-                    really fast! We have close to 600 staff and contractors
-                    worldwide, adding more than 100 people to the business,
-                    which grows year on year, since 2017.
-                  </li>
-                </List>
+                <Text variant="small" mb={3}>
+                  As for content management, we implemented Prismic as a Content
+                  Management System (CMS). Prismic provides several advantages
+                  that supported a future-friendly solution, with tools
+                  including built-in image optimisation and flexible data
+                  structure creation.
+                </Text>
+                <Text variant="small" mb={3}>
+                  For authentication and general back-end functionality, we
+                  utilised Fauna. Fauna is a fast, transactional database
+                  platform with built-in modules such as authentication, as well
+                  as scaling capabilities.
+                </Text>
+              </Box>
+              <Box pb={["40px", null, "65px"]}>
+                <Title variant="card" mt="18px" mb="18px">
+                  Technologies
+                </Title>
+                <LogoList>
+                  <LogoContainer>
+                    <TechLogo src={nextjs} />
+                  </LogoContainer>
+
+                  <LogoContainer>
+                    <TechLogo src={prismic} />
+                  </LogoContainer>
+
+                  <LogoContainer>
+                    <TechLogo src={fauna} />
+                  </LogoContainer>
+                </LogoList>
               </Box>
               <Box pb={["40px", null, "65px"]}>
                 <Title variant="card" mb="18px">
                   Learnings
                 </Title>
                 <Text variant="small">
-                  A Senior Data Engineer provides technical and delivery
-                  leadership for a team of developers working on data
-                  integration and processing projects. This role will work with
-                  stakeholders and other developers to design and implement
-                  technical data solutions for the business in a way that
-                  balances quality, cost, time and maintainability.
+                  As this project is still under development, we expect certain
+                  details to change quickly. Though we may have hit a few road
+                  bumps here and there we're currently on track to finishing it
+                  to the discussed timeframe.
                 </Text>
               </Box>
               <Box>
-                <Button>Check live website</Button>
+                <Button>Currently in development</Button>
               </Box>
             </Col>
           </Row>

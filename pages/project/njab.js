@@ -34,22 +34,31 @@ const InsideImage = styled.img`
 `;
 
 const LogoList = styled.div`
-  display: flex;
+  @media (min-width: ${breakpoints.lg}px) {
+    display: flex;
+  }
 `;
 
 const LogoContainer = styled.div`
   height: 40px;
-  margin: 0 1em;
 
-  &:first-of-type {
-    margin-left: 0;
+  @media (min-width: ${breakpoints.lg}px) {
+    margin: 0 1em;
+
+    &:first-of-type {
+      margin-left: 0;
+    }
   }
 `;
 
 const TechLogo = styled.img`
   height: 100%;
-  width: 100%;
+
   object-fit: cover;
+
+  @media (min-width: ${breakpoints.lg}px) {
+    width: 100%;
+  }
 `;
 
 const NJAB = () => {
@@ -81,19 +90,6 @@ const NJAB = () => {
                   customers.
                 </Text>
               </Box>
-              {/* <Box pb={["40px", null, "65px"]}>
-                <Title variant="card" mb="18px">
-                  Client Brief
-                </Title>
-                <Text variant="small">
-                  A Senior Data Engineer provides technical and delivery
-                  leadership for a team of developers working on data
-                  integration and processing projects. This role will work with
-                  stakeholders and other developers to design and implement
-                  technical data solutions for the business in a way that
-                  balances quality, cost, time and maintainability.
-                </Text>
-              </Box> */}
             </Col>
           </Row>
           <Row>
@@ -110,7 +106,7 @@ const NJAB = () => {
           </Row>
           <Row className="mt-5">
             <Col lg="12" xl="10" className="offset-xl-1 pt-4">
-              <Box pb={["40px", null, "65px"]}>
+              <Box pb={["40px", null, "30px"]}>
                 <Title variant="card" mb="18px">
                   Solution
                 </Title>
@@ -126,6 +122,11 @@ const NJAB = () => {
                   including built-in image optimisation and flexible data
                   structure creation.
                 </Text>
+              </Box>
+              <Box pb={["40px", null, "65px"]}>
+                <Title variant="card" mt="18px" mb="18px">
+                  Technologies
+                </Title>
                 <LogoList>
                   <LogoContainer>
                     <TechLogo src={gatsby} />
