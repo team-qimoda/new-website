@@ -1,8 +1,9 @@
 import React from "react";
+import dynamic from "next/dynamic";
 import { Container, Row, Col } from "react-bootstrap";
 import styled from "styled-components";
 import { Title, Button, Section, Box, Text } from "../../components/Core";
-import Illustration from "./Illustration";
+const Illustration = dynamic(() => import("./Illustration"));
 import { breakpoints } from "utils/breakpoints";
 
 const HeroTitle = styled(Title)`

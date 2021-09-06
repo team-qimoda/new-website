@@ -3,7 +3,7 @@ import Hero from "sections/homepage/Hero";
 import Fact from "sections/homepage/Fact";
 import Content from "sections/homepage/Content";
 import CaseStudies from "sections/homepage/CaseStudies";
-import Reviews from "sections/homepage/Reviews";
+// import Reviews from "sections/homepage/Reviews";
 import Contact from "sections/homepage/Contact";
 
 import PageWrapper from "components/PageWrapper";
