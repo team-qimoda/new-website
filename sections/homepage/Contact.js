@@ -3,18 +3,11 @@ import Link from "next/link";
 import styled from "styled-components";
 import { Container, Row, Col } from "react-bootstrap";
 
-import {
-  Title,
-  Button,
-  Box,
-  Text,
-  Input,
-  Checkbox,
-} from "../../components/Core";
+import { Title, Button, Box, Text, Input, Checkbox } from "components/Core";
 
-import { device } from "../../utils";
+import { device } from "utils";
 
-import imgShape from "../../assets/image/svg/contact-shape.svg";
+import imgShape from "assets/image/svg/contact-shape.svg";
 
 const BoxStyled = styled(Box)`
   &::after {
