@@ -1,13 +1,14 @@
 import React from "react";
+import dynamic from "next/dynamic";
+
 import Hero from "sections/homepage/Hero";
 import Fact from "sections/homepage/Fact";
-import Content from "sections/homepage/Content";
-import CaseStudies from "sections/homepage/CaseStudies";
 // import Reviews from "sections/homepage/Reviews";
-import Contact from "sections/homepage/Contact";
-
 import PageWrapper from "components/PageWrapper";
 import Companies from "sections/homepage/Companies";
+const CaseStudies = dynamic(() => import("sections/homepage/CaseStudies"));
+const Contact = dynamic(() => import("sections/homepage/Contact"));
+const Content = dynamic(() => import("sections/homepage/Content"));
 
 const LandingPage7 = () => {
   return (
