@@ -4,10 +4,10 @@ import { Container, Row, Col } from "react-bootstrap";
 import Image from "next/image";
 import { Section, Box } from "../../components/Core";
 import { device } from "../../utils";
-import deloitteLogo from "public/companies/deloitte.svg";
-import mayadLogo from "public/companies/mayad.svg";
-import njabLogo from "public/companies/njab.svg";
-import IKLogo from "public/companies/insuranceko.svg";
+import deloitteLogo from "public/companies/deloitte.png";
+import mayadLogo from "public/companies/mayad.png";
+import njabLogo from "public/companies/njab.png";
+import IKLogo from "public/companies/insuranceko.png";
 
 const SectionStyled = styled(Section)`
   padding: 3em 0;
@@ -25,7 +25,7 @@ const LogoContainer = styled(Box)`
     height: 100%;
 
     img {
-      object-fit: cover;
+      object-fit: contain;
       height: 100%;
     }
   }
