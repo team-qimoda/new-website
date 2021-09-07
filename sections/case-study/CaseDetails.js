@@ -24,7 +24,7 @@ const CaseDetails = ({ heroImage = imgCase1, heroVideo, children }) => (
       <Container>
         <ImgContainer className="text-center" mb={["50px", null, "75px"]}>
           {heroVideo ? (
-            <video autoPlay muted loop playsinline>
+            <video autoPlay muted loop playsInline>
               <source src={heroVideo} type="video/mp4" />
             </video>
           ) : heroImage ? (
