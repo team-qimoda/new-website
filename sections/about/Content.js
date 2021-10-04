@@ -6,12 +6,23 @@ import { Title, Section, Box, Text } from "../../components/Core";
 
 import imgContent1 from "../../assets/image/jpeg/easy-image-2-1.jpeg";
 import imgContent2 from "../../assets/image/jpeg/easy-image-2-2.jpeg";
+import { breakpoints } from "utils";
 
 const ContentImg = styled(Box)`
   box-shadow: ${({ theme }) => `0 42px 54px ${theme.colors.shadow}`};
   border-radius: 10px;
   overflow: hidden;
-  height: 465px;
+  height: 350px;
+
+  img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+  }
+
+  @media (min-width: ${breakpoints.lg}px) {
+    height: 465px;
+  }
 `;
 
 const Content = () => (
