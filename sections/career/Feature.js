@@ -41,8 +41,8 @@ const OuterCircle = styled(Box)`
   }
 `;
 
-const FeatureCard = ({ color = "primary", title, children, ...rest }) => (
-  <Box width={"100%"} bg="light" {...rest}>
+const FeatureCard = ({ color = "primary", title, children, ...props }) => (
+  <Box width={"100%"} bg="light" {...props}>
     <div className="d-flex justify-content-between align-items-start">
       <Box
         size={69}

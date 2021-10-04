@@ -280,7 +280,7 @@ const Header = ({ isDark = false }) => {
           <nav className="navbar site-navbar offcanvas-active navbar-expand-lg navbar-light">
             {/* <!-- Brand Logo--> */}
             <div className="brand-logo">
-              <Logo white={isDark} isSmall={showScrolling} />
+              <Logo isDark={isDark} isSmall={showScrolling} />
             </div>
             <div className="collapse navbar-collapse">
               <div className="navbar-nav ml-lg-auto mr-3">
@@ -290,14 +290,14 @@ const Header = ({ isDark = false }) => {
                 >
                   {menuItems.map(
                     (
-                      { label, isExternal = false, name, items, ...rest },
+                      { label, isExternal = false, name, items, ...props },
                       index
                     ) => {
                       const hasSubItems = Array.isArray(items);
                       return (
                         <React.Fragment key={name + index}>
                           {hasSubItems ? (
-                            <li className="nav-item dropdown" {...rest}>
+                            <li className="nav-item dropdown" {...props}>
                               <a
                                 className="nav-link dropdown-toggle"
                                 role="button"
@@ -388,7 +388,7 @@ const Header = ({ isDark = false }) => {
                               </MenuDropdown>
                             </li>
                           ) : (
-                            <li className="nav-item" {...rest}>
+                            <li className="nav-item" {...props}>
                               {isExternal ? (
                                 <a
                                   className="nav-link"

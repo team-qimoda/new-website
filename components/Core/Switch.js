@@ -44,7 +44,7 @@ const Round = styled.span`
   pointer-events: none;
 `;
 
-const Switch = ({ bg = "secondary", onClick = () => {}, ...rest }) => {
+const Switch = ({ bg = "secondary", onClick = () => {}, ...props }) => {
   const [active, setActive] = useState(false);
 
   const handleSwitch = () => {
@@ -55,7 +55,7 @@ const Switch = ({ bg = "secondary", onClick = () => {}, ...rest }) => {
   return (
     <SwitchStyled
       bg={bg}
-      {...rest}
+      {...props}
       onClick={handleSwitch}
       active={active ? 1 : 0}
     >

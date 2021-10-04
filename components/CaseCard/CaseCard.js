@@ -42,9 +42,9 @@ const CaseCard = ({
   title,
   children,
   readMore,
-  ...rest
+  ...props
 }) => (
-  <Card className="d-flex" {...rest}>
+  <Card className="d-flex" {...props}>
     <ImageContainer>
       <Link href="/">
         <a>

@@ -82,7 +82,7 @@ const MenuItem = ({
   items,
   depthStep = 20,
   depth = 0,
-  ...rest
+  ...props
 }) => {
   const [open, setOpen] = useState(false);
   const hasSubItems = Array.isArray(items);
@@ -93,7 +93,7 @@ const MenuItem = ({
     <>
       {hasSubItems ? (
         <ListGroup.Item
-          {...rest}
+          {...props}
           css={`
             padding-left: ${depth * depthStep}px !important;
             cursor: pointer;
@@ -106,7 +106,7 @@ const MenuItem = ({
         </ListGroup.Item>
       ) : (
         <ListGroup.Item
-          {...rest}
+          {...props}
           css={`
             padding-left: ${depth * depthStep}px !important;
           `}

@@ -166,7 +166,7 @@ const Button = ({
   color = "light",
   bg = "primary",
   link = "",
-  ...rest
+  ...props
 }) => {
   return variant === "solid" ? (
     !!link ? (
@@ -177,7 +177,7 @@ const Button = ({
           borderColor={bg}
           bg={bg}
           href={link}
-          {...rest}
+          {...props}
         />
       </Link>
     ) : (
@@ -186,7 +186,7 @@ const Button = ({
         border={`1px solid`}
         borderColor={bg}
         bg={bg}
-        {...rest}
+        {...props}
       />
     )
   ) : !!link ? (
@@ -195,7 +195,7 @@ const Button = ({
         color={color}
         border={`1px solid`}
         borderColor={color}
-        {...rest}
+        {...props}
       />
     </Link>
   ) : (
@@ -204,7 +204,7 @@ const Button = ({
       bg={bg}
       border={`1px solid`}
       borderColor={color}
-      {...rest}
+      {...props}
     />
   );
 };

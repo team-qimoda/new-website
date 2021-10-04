@@ -86,10 +86,10 @@ const Input = ({
   type = "text",
   focusColor = "secondary",
   placeholder,
-  ...rest
+  ...props
 }) => {
   return variant === "animation" ? (
-    <InputAnimation {...rest}>
+    <InputAnimation {...props}>
       <input width="100%" type={type} color="text" bg="light" />
       <label>{placeholder}</label>
     </InputAnimation>
@@ -101,7 +101,7 @@ const Input = ({
       bg="light"
       placeholder={placeholder}
       focusColor={focusColor}
-      {...rest}
+      {...props}
     />
   );
 };

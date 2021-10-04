@@ -31,14 +31,14 @@ const BadgeSolid = styled.span`
   ${layout};
 `;
 
-const Badge = ({ color = "light", bg = "primary", ...rest }) => {
+const Badge = ({ color = "light", bg = "primary", ...props }) => {
   return (
     <BadgeSolid
       color={color}
       border={`1px solid`}
       borderColor={bg}
       bg={bg}
-      {...rest}
+      {...props}
     />
   );
 };

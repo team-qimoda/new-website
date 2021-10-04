@@ -18,14 +18,14 @@ const ContentCard = ({
   name,
   company,
   children,
-  ...rest
+  ...props
 }) => (
   <Box
     minHeight={["320px", null, `400px`]}
     borderColor="border"
     borderRadius={10}
     className={`d-flex flex-column ${className}`}
-    {...rest}
+    {...props}
     aos="fade-left"
     data-aos-delay="500"
     data-aos-duration="1000"

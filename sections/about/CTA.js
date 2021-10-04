@@ -1,7 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import { Container, Row, Col } from "react-bootstrap";
-
+import Link from "next/link";
 import { Title, Button, Section, Box, Text } from "../../components/Core";
 
 import imgOval from "../../assets/image/png/l1-cta-oval.png";
@@ -37,14 +37,16 @@ const CTA = () => (
         <Row className="justify-content-center text-center">
           <Col lg="6">
             <Box mb={5} className="text-center">
-              <Title color="light">Want to join?</Title>
+              <Title color="light">Care to collaborate?</Title>
               <Text color="light" opacity={0.7}>
-                Are you interested to join our team? Check out our job openings
-                and apply on your suitable role.
+                Have any ideas you want developed? Give us a shout and we'll
+                start from there.
               </Text>
             </Box>
             <Box>
-              <Button>Check Job Openings</Button>
+              <Link href="/contact">
+                <Button>Get Started</Button>
+              </Link>
             </Box>
           </Col>
         </Row>

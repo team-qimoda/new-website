@@ -22,7 +22,7 @@ const InputGroup = ({
   type = "text",
   focusColor = "secondary",
   icon = <span className="far fa-envelope" />,
-  ...rest
+  ...props
 }) => {
   return (
     <InputGroupStyled>
@@ -33,7 +33,7 @@ const InputGroup = ({
         bg="light"
         focusColor={focusColor}
         pl="4.125rem"
-        {...rest}
+        {...props}
       />
       <Icon className="d-flex align-items-center">{icon}</Icon>
     </InputGroupStyled>

@@ -20,7 +20,7 @@ const ContentCard = ({
   name,
   company,
   children,
-  ...rest
+  ...props
 }) => (
   <Box
     bg="light"
@@ -30,7 +30,7 @@ const ContentCard = ({
     css={`
       box-shadow: 0 2px 4px rgba(14, 86, 124, 0.17) !important;
     `}
-    {...rest}
+    {...props}
   >
     <Box className={`d-flex justify-content-between`}>
       <Box className="d-flex justify-content-center align-items-start" mr={3}>

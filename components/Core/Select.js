@@ -19,9 +19,10 @@ const getCustomStyles = (theme) => {
     control: (provided, state) => {
       return {
         ...provided,
-        border: state.menuIsOpen || state.isFocused 
-          ? `1px solid ${theme.colors.secondary} !important`
-          : `1px solid ${theme.colors.border} !important`,
+        border:
+          state.menuIsOpen || state.isFocused
+            ? `1px solid ${theme.colors.secondary} !important`
+            : `1px solid ${theme.colors.border} !important`,
         borderRadius: 10,
         padding: "1.275rem 1rem",
         outline: "none",
@@ -35,7 +36,7 @@ const SelectStyled = ({
   theme,
   name = "item",
   options = defaultOptions,
-  ...rest
+  ...props
 }) => {
   return (
     <Select
@@ -43,7 +44,7 @@ const SelectStyled = ({
       defaultValue={options[1]}
       name={name}
       options={options}
-      {...rest}
+      {...props}
     />
   );
 };

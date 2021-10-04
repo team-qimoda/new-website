@@ -54,12 +54,12 @@ const Text = styled.p`
 const Checkbox = ({
   children = "Keep me signed in",
   onClick = () => {},
-  ...rest
+  ...props
 }) => {
   const uID = "check_";
 
   return (
-    <CheckStyled {...rest} htmlFor={uID}>
+    <CheckStyled {...props} htmlFor={uID}>
       <input className="d-none" type="checkbox" id={uID} />
       <Check className="check"></Check>
       <Text>{children}</Text>

@@ -49,10 +49,10 @@ const RolesCard = ({
   location,
   type,
   children,
-  ...rest
+  ...props
 }) => (
   <Link href="/">
-    <Card className="card-job top-only" {...rest}>
+    <Card className="card-job top-only" {...props}>
       <div className="d-flex justify-content-between align-items-center mb-4">
         <Location>
           <i className="icon icon-pin-3 mr-1"></i> {location}

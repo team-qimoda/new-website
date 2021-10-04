@@ -1,10 +1,10 @@
 import React from "react";
 import { Box } from "../Core";
 
-const Rating = ({ numStar = 4.5, color = "secondary", ...rest }) => {
+const Rating = ({ numStar = 4.5, color = "secondary", ...props }) => {
   return (
     <>
-      <Box color={color} {...rest}>
+      <Box color={color} {...props}>
         {[...Array(5)].map((item, index) => {
           return index + 1 <= numStar ? (
             <i className="fas fa-star mr-1" key={index}></i>

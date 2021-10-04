@@ -2,7 +2,7 @@ import React from "react";
 import styled from "styled-components";
 import { Container, Row, Col } from "react-bootstrap";
 import Image from "next/image";
-import { Section, Box } from "../../components/Core";
+import { Section, Box, Text } from "../../components/Core";
 import { device } from "../../utils";
 import deloitteLogo from "public/companies/deloitte.png";
 import mayadLogo from "public/companies/mayad.png";
@@ -45,6 +45,15 @@ const Companies = () => (
     <SectionStyled bg="dark">
       <Container>
         <Row>
+          <Col
+            sm="12"
+            className="mb-5 d-flex align-items-center justify-content-center"
+          >
+            <Text color="lightShade">
+              Our team of professionals have worked with and for the following
+              clientele
+            </Text>
+          </Col>
           <Col
             lg="3"
             md="4"

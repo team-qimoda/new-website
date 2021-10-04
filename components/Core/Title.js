@@ -60,7 +60,7 @@ const CardTitle = styled.h4`
   ${shadow};
 `;
 
-const Title = ({ variant, ...rest }) => {
+const Title = ({ variant, ...props }) => {
   let TitleStyled = SectionTitle;
 
   switch (variant) {
@@ -74,7 +74,7 @@ const Title = ({ variant, ...rest }) => {
       TitleStyled = SectionTitle;
   }
 
-  return <TitleStyled color="heading" {...rest} />;
+  return <TitleStyled color="heading" {...props} />;
 };
 
 export default Title;

@@ -12,13 +12,14 @@ const SectionStyled = styled(Section)`
   );
 `;
 
-const Hero = ({ title, children, ...rest }) => {
+const Hero = ({ title, children, isDark, sideContent, ...props }) => {
   return (
     <>
       <SectionStyled
         pt={["120px!important", null, "190px!important"]}
         pb={["50px!important", null, "180px!important"]}
-        {...rest}
+        bg={isDark && "dark"}
+        {...props}
       >
         <Container>
           <Row>
@@ -28,6 +29,7 @@ const Hero = ({ title, children, ...rest }) => {
                 <Text>{children}</Text>
               </div>
             </Col>
+            {sideContent && <Col lg="6">{sideContent}</Col>}
           </Row>
         </Container>
       </SectionStyled>

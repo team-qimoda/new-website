@@ -5,6 +5,8 @@ const LogoImage = styled.img`
   height: 60%;
   z-index: 1;
   position: relative;
+  filter: ${({ isDark }) =>
+    !isDark ? "brightness(120%)" : "brightness(100%)"};
 `;
 
 const LogoBg = styled.img`
@@ -18,6 +20,7 @@ const LogoBg = styled.img`
   left: 0;
   top: 0;
   z-index: 0;
+  filter: ${({ isDark }) => (!isDark ? "brightness(93%)" : "brightness(100%)")};
 
   @keyframes spin {
     from {
@@ -36,6 +39,7 @@ const LogoStarOne = styled.img`
   position: absolute;
   top: 0;
   left: 0;
+  filter: ${({ isDark }) => (!isDark ? "brightness(93%)" : "brightness(100%)")};
   opacity: ${({ isSmall }) => (isSmall ? "0" : "1")};
 `;
 
@@ -46,6 +50,7 @@ const LogoStarTwo = styled.img`
   position: absolute;
   bottom: 0;
   right: 0;
+  filter: ${({ isDark }) => (!isDark ? "brightness(93%)" : "brightness(100%)")};
   opacity: ${({ isSmall }) => (isSmall ? "0" : "1")};
 `;
 
@@ -59,13 +64,13 @@ const LogoContainer = styled.div`
   justify-content: center;
 `;
 
-const QimodaLogo = ({ isSmall }) => {
+const QimodaLogo = ({ isSmall, isDark = false }) => {
   return (
     <LogoContainer isSmall={isSmall}>
-      <LogoImage src="/logo/letter.svg" alt="Qimoda" />
-      <LogoBg src="/logo/starbg.svg" />
-      <LogoStarOne isSmall={isSmall} src="/logo/14.svg" />
-      <LogoStarTwo isSmall={isSmall} src="/logo/13.svg" />
+      <LogoImage isDark={isDark} src="/logo/letter.svg" alt="Qimoda" />
+      <LogoBg isDark={isDark} src="/logo/starbg.svg" />
+      <LogoStarOne isDark={isDark} isSmall={isSmall} src="/logo/14.svg" />
+      <LogoStarTwo isDark={isDark} isSmall={isSmall} src="/logo/13.svg" />
     </LogoContainer>
   );
 };

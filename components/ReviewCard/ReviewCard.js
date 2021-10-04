@@ -14,7 +14,7 @@ const ReviewCard = ({
   name,
   company,
   children,
-  ...rest
+  ...props
 }) => (
   <Box
     bg="light"
@@ -25,7 +25,7 @@ const ReviewCard = ({
     pb="30px"
     borderRadius={10}
     className={`d-flex flex-column ${className}`}
-    {...rest}
+    {...props}
     aos="fade-left"
     data-aos-delay="500"
     data-aos-duration="1000"

@@ -6,8 +6,8 @@ import { Title, Section, Box, Text } from "../../components/Core";
 
 const SectionStyled = styled(Section)``;
 
-const FaqCard = ({ title, children, ...rest }) => (
-  <Box {...rest}>
+const FaqCard = ({ title, children, ...props }) => (
+  <Box {...props}>
     <Title variant="card" mb={4} fontSize="24px" fontWeight="900">
       {title}
     </Title>

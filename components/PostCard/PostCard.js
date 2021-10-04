@@ -62,11 +62,11 @@ const PostCard = ({
   title,
   children,
   readMore,
-  ...rest
+  ...props
 }) => (
   <Card
     className={horizontal ? "d-flex flex-column flex-md-row" : ""}
-    {...rest}
+    {...props}
   >
     {horizontal ? (
       <ImageContainerHorizontal>

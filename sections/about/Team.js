@@ -4,33 +4,37 @@ import { Container, Row, Col } from "react-bootstrap";
 
 import { Title, Section, Box, Text } from "../../components/Core";
 
-import imgU1 from "../../assets/image/jpeg/about-team-1.jpg";
-import imgU2 from "../../assets/image/jpeg/about-team-3.jpg";
-import imgU3 from "../../assets/image/jpeg/about-team-4.jpg";
+import imgU1 from "../../assets/image/jpeg/sidney.jpeg";
+import imgU2 from "../../assets/image/jpeg/sam.jpeg";
+import imgU3 from "../../assets/image/png/arben.png";
 import imgU4 from "../../assets/image/jpeg/about-team-5.jpg";
 import imgU5 from "../../assets/image/jpeg/about-team-6.jpg";
 import imgU6 from "../../assets/image/jpeg/about-team-2.jpg";
 
 const CardImage = styled.div`
-  max-width: 160px;
-  min-width: 160px;
-  min-height: 160px;
-  max-height: 160px;
+  height: 160px;
+  width: 160px;
   overflow: hidden;
   border-radius: 500px;
   display: inline-flex;
   align-items: center;
   margin-bottom: 29px;
+
+  img {
+    object-fit: cover;
+    max-width: initial;
+    height: 100%;
+  }
 `;
 
-const TeamCard = ({ userImg, title, children, ...rest }) => (
+const TeamCard = ({ userImg, title, children, ...props }) => (
   <Box
     className="text-center"
     pt="15px"
     px="30px"
     borderRadius={10}
     mb={4}
-    {...rest}
+    {...props}
   >
     <CardImage>
       <img src={userImg} className="img-fluid" alt="" />
@@ -56,29 +60,30 @@ const Team = () => (
             <div className="">
               <Title>Meet the team</Title>
               <Text>
-                Create custom landing pages with Omega that converts more
-                visitors than any website.{" "}
+                From tech implementation to social media strategy, our
+                experienced team can provide you with guidance every step of the
+                way.
               </Text>
             </div>
           </Col>
         </Row>
         <Row className="align-items-center justify-content-center">
           <Col sm="6" md="5" lg="4" className="mt-3 mt-lg-4">
-            <TeamCard userImg={imgU1} title="Louise Elliott">
+            <TeamCard userImg={imgU1} title="Sidney Ramos">
               Founder and CEO
             </TeamCard>
           </Col>
           <Col sm="6" md="5" lg="4" className="mt-3 mt-lg-4">
-            <TeamCard userImg={imgU2} title="Trevor Fleming">
-              CTO
+            <TeamCard userImg={imgU2} title="Alahna Sam Sy">
+              Digital Marketing Director & Consultant
             </TeamCard>
           </Col>
           <Col sm="6" md="5" lg="4" className="mt-3 mt-lg-4">
-            <TeamCard userImg={imgU3} title="Raymond Baker">
-              Software Engineer
+            <TeamCard userImg={imgU3} title="Arben Camayang">
+              Digital Marketing Specialist & Voice Talent
             </TeamCard>
           </Col>
-          <Col sm="6" md="5" lg="4" className="mt-3 mt-lg-4">
+          {/* <Col sm="6" md="5" lg="4" className="mt-3 mt-lg-4">
             <TeamCard userImg={imgU4} title="George Torres">
               UX Designer
             </TeamCard>
@@ -92,7 +97,7 @@ const Team = () => (
             <TeamCard userImg={imgU6} title="Todd Summers">
               Digital Marketer
             </TeamCard>
-          </Col>
+          </Col> */}
         </Row>
       </Container>
     </Section>

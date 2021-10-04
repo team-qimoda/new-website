@@ -9,9 +9,9 @@ const FeatureCard = ({
   iconName,
   title,
   children,
-  ...rest
+  ...props
 }) => (
-  <Box pt="15px" px="30px" borderRadius={10} mb={4} {...rest}>
+  <Box pt="15px" px="30px" borderRadius={10} mb={4} {...props}>
     <Box
       size={69}
       borderRadius="50%"

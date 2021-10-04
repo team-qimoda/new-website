@@ -49,7 +49,7 @@ const LogoContainer = styled.div`
   font-size: 1.25rem;
 `;
 
-const Offcanvas = ({ show, onHideOffcanvas, children, ...rest }) => {
+const Offcanvas = ({ show, onHideOffcanvas, children, ...props }) => {
   if (typeof document !== "undefined") {
     if (show) {
       document.querySelector("html").classList.add("has-offcanvas");
@@ -61,7 +61,7 @@ const Offcanvas = ({ show, onHideOffcanvas, children, ...rest }) => {
   }
 
   return (
-    <div {...rest}>
+    <div {...props}>
       <Overlay className={show ? "" : "hidden"} onClick={onHideOffcanvas} />
       <Drawer className={show ? "" : "hidden"}>
         <Container>

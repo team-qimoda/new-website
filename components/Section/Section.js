@@ -22,11 +22,11 @@ const DivStyledInside = styled(DivStyled)`
   }
 `;
 
-const Section = ({ children, inside, ...rest }) => {
+const Section = ({ children, inside, ...props }) => {
   return inside ? (
-    <DivStyledInside {...rest}> {children}</DivStyledInside>
+    <DivStyledInside {...props}> {children}</DivStyledInside>
   ) : (
-    <DivStyled {...rest}> {children}</DivStyled>
+    <DivStyled {...props}> {children}</DivStyled>
   );
 };
 

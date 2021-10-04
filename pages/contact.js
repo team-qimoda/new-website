@@ -19,10 +19,10 @@ const Contact2 = () => {
             <Row>
               <Col lg={6} className="mb-5 mb-lg-0">
                 <div className="banner-content mb-5">
-                  <Title variant="hero">Get in Touch</Title>
+                  <Title variant="hero">Let's get started.</Title>
                   <Text>
-                    We're here for you 24/7. Just leave your name and email and
-                    we'll get back to you ASAP.
+                    Interested in kickstarting a project? Leave your details and
+                    let's discuss how we can collaborate.
                   </Text>
                 </div>
                 <div>
