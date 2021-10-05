@@ -13,10 +13,18 @@ const StyledError = styled(Text)`
 
 const ContactForm = ({ buttonText = "Send Message" }) => {
   const [success, setSuccess] = useState("");
-  const onSubmit = (val) => {
-    console.log(val);
-
-    axios.post("/api/email", val);
+  const [error, setError] = useState("");
+  const onSubmit = async (val) => {
+    try {
+      const emailPost = await axios.post("/api/email", val);
+      // console.log(emailPost);
+    } catch (e) {
+      setError(e.message);
+      setTimeout(() => {
+        setError("");
+      }, 4500);
+      return;
+    }
     form.reset();
 
     setSuccess(`Success! We'll get back to you in a bit.`);
@@ -51,6 +59,7 @@ const ContactForm = ({ buttonText = "Send Message" }) => {
   return (
     <div>
       {success && <Alert variant="success">{success}</Alert>}
+      {error && <Alert variant="danger">{error}</Alert>}
       <Form onSubmit={handleSubmit}>
         {/* You still need to add the hidden input with the form name to your JSX form */}
         <input type="hidden" name="form-name" value="contact3" />

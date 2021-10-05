@@ -34,7 +34,7 @@ const Shape = styled(Box)`
   }
 `;
 
-const FormStyled = styled.form`
+const FormStyled = styled.div`
   padding: 40px 30px;
   @media ${device.sm} {
     padding: 53px 58px 50px;
