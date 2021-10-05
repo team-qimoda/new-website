@@ -8,6 +8,7 @@ import { Title, Button, Box, Text, Input, Checkbox } from "components/Core";
 import { device } from "utils";
 
 import imgShape from "assets/image/svg/contact-shape.svg";
+import ContactForm from "components/Form/Contact";
 
 const BoxStyled = styled(Box)`
   &::after {
@@ -81,27 +82,7 @@ const Contact = () => (
                 <Text>Drop us a line & we will get back to you soon!</Text>
               </div>
 
-              <Box mb={3}>
-                <Input type="text" placeholder="Your name" />
-              </Box>
-              <Box mb={3}>
-                <Input type="email" placeholder="Email address" />
-              </Box>
-              <Box mb={4} className="position-relative">
-                <Input as="textarea" placeholder="Tell us about your project" />
-              </Box>
-              <Box mb={3} className="text-left">
-                <Checkbox>
-                  I agree to the{" "}
-                  <Link href="/">
-                    <AForgot>Terms & Condition</AForgot>
-                  </Link>
-                </Checkbox>
-              </Box>
-
-              <Button width="100%" type="submit" borderRadius={10}>
-                Send
-              </Button>
+              <ContactForm buttonText="Send" />
             </FormStyled>
           </Col>
         </Row>
