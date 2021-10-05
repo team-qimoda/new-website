@@ -17,18 +17,17 @@ const Projects = () => {
           <Container>
             <Row className="justify-content-center text-center">
               <Col lg="6">
-                <Title variant="hero">Case Study</Title>
+                <Title variant="hero">Our Work</Title>
                 <Text>
-                  Create custom landing pages with Omega that converts more
-                  visitors than any website.
+                  Our team has worked on interesting projects with a couple of
+                  purpose-led businesses.
                 </Text>
               </Col>
             </Row>
           </Container>
         </Section>
         <CaseList />
-        <CaseList2 />
-        <CaseList />
+        {/* <CaseList2 /> */}
         <CTA />
       </PageWrapper>
     </>

@@ -1,7 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import { Container, Row, Col } from "react-bootstrap";
-
+import Link from "next/link";
 import { Title, Button, Section, Box, Text } from "../../components/Core";
 
 import imgOval from "../../assets/image/png/l1-cta-oval.png";
@@ -44,7 +44,9 @@ const CTA = () => (
               </Text>
             </Box>
             <Box>
-              <Button>Get Started</Button>
+              <Link href="/contact">
+                <Button>Get Started</Button>
+              </Link>
             </Box>
           </Col>
         </Row>

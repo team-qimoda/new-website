@@ -41,6 +41,7 @@ const BrandImage = styled(Box)`
   border-radius: 8px;
   border: 1px solid #eae9f2;
   overflow: hidden;
+  max-width: 120px;
 `;
 
 const CardText = styled(Box)`
